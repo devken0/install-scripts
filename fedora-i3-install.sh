@@ -71,6 +71,10 @@ sudo dnf in rclone
 
 wget https://www.idrivedownloads.com/downloads/linux/download-for-linux/LinuxScripts/IDriveForLinux.zip
 
+# system backup
+
+sudo dnf in timeshift
+
 # multimedia 
 
 sudo dnf in feh vlc picard peek kdenlive simplescreenrecorder flameshot ffmpeg ffmpeg-devel yt-dlp 
