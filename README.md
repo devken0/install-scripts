@@ -9,5 +9,5 @@ fastestmirror=True
 deltarpm=True
 max_parallel_downloads=10
 defaultyes=True
-keepcache=True" >> /etc/dnf/dnf.conf
+keepcache=True
 ```
