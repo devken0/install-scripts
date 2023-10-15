@@ -1,6 +1,4 @@
-This repository houses the scripts that I use to facilitate the initial installation of packages in Linux.
-
-## Before using the scripts in Fedora 
+# Before using the scripts in Fedora 
 
 Make sure that you have configured the DNF package manager before executing the scripts for a faster installation of system/user packages.
 
