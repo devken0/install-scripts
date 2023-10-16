@@ -137,7 +137,7 @@ sudo dnf in vim htop screenfetch ncdu ranger
 # others
 
 sudo dnf copr enable skidnik/clipmenu
-sudo dnf in catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct
+sudo dnf in catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom
 #sudo dnf in scrcpy mintstick gprename ytfzf
 read -rns1 -p "Press any key to continue..";echo
 
