@@ -30,7 +30,7 @@ sudo dnf in wget
 # security 
 
 sudo dnf in https://repo.protonvpn.com/fedora-38-unstable/protonvpn-beta-release/protonvpn-beta-release-1.0.1-2.noarch.rpm
-wget https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=appimage
+wget -P ~/.local/bin https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=appimage
 sudo dnf in https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-CentOS-8-x86_64.rpm
 sudo dnf in keepassxc firewalld
 
@@ -92,7 +92,7 @@ sudo dnf in kdeconnect
 # office
 
 sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
-wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage
+wget -P ~/.local/bin https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage
 
 # cli utils 
 
@@ -103,15 +103,13 @@ sudo dnf in vim htop screenfetch ncdu ranger ytfzf
 sudo dnf in scrcpy mintstick catfish gpick gprename gip guvcview gparted soundconverter 
 read -rns1 -p "Press any key to continue..";echo
 
-
 # ----------------------------------
 
 # Flatpak 
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.signal.Signal md.obsidian.Obsidian com.github.tchx84.Flatseal
+flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
-
 
 read -rns1 -p "Please reboot..";echo
 
