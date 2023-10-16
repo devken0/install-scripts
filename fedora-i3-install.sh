@@ -18,6 +18,8 @@ sudo dnf group upgrade --with-optional Multimedia
 sudo dnf in akmod-nvidia
 sudo dnf in polkit-gnome
 
+sudo dnf in wget
+
 # ----------------------------------
 
 # text editor  
@@ -86,7 +88,7 @@ sudo dnf in kdeconnect
 
 # office
 
-https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
+sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage
 
 # cli utils 
@@ -103,7 +105,7 @@ sudo dnf in scrcpy mintstick catfish gpick gprename gip guvcview gparted soundco
 # Flatpak 
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.signal.Signal md.obsidian.Obsidian
+flatpak install flathub org.signal.Signal md.obsidian.Obsidian com.github.tchx84.Flatseal
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
 
 
