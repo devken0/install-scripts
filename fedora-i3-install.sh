@@ -126,7 +126,7 @@ sudo dnf in kdeconnectd
 
 # office
 
-sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
+sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm libreoffice
 wget -P ~/.local/bin https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage
 #sudo ln -s ~/.local/bin/Obsidian-1.4.16.AppImage /usr/local/bin/obsidian
 
@@ -156,6 +156,9 @@ flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
 
 # post commands
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+cat <<EOF | sudo tee /etc/environment 
+QT_QPA_PLATFORMTHEME=qt5ct 
+EOF
 
 read -rns1 -p "Please reboot..";echo
 
