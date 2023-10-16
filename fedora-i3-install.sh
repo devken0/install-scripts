@@ -27,14 +27,12 @@ read -rns1 -p "Press any key to continue..";echo
 
 sudo dnf in wget
 
-# text editor  
-
-sudo dnf in sublime-text 
-
 # security 
 
 sudo dnf in https://repo.protonvpn.com/fedora-38-unstable/protonvpn-beta-release/protonvpn-beta-release-1.0.1-2.noarch.rpm
-sudo dnf in veracrypt keepassxc bitwarden firewalld
+wget https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=appimage
+sudo dnf in https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-CentOS-8-x86_64.rpm
+sudo dnf in keepassxc firewalld
 
 # vms
 
