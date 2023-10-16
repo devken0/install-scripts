@@ -155,10 +155,8 @@ flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
 
 # post commands
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-cat <<EOF | sudo tee /etc/environment 
-QT_QPA_PLATFORMTHEME=qt5ct 
-EOF
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark 
+echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.bash_profile
 
 read -rns1 -p "Please reboot..";echo
 
