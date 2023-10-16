@@ -18,9 +18,11 @@ sudo dnf group upgrade --with-optional Multimedia
 sudo dnf in akmod-nvidia
 sudo dnf in polkit-gnome
 
-sudo dnf in wget
-
 # ----------------------------------
+
+# required packages for the script
+
+sudo dnf in wget
 
 # text editor  
 
@@ -109,6 +111,7 @@ flatpak install flathub org.signal.Signal md.obsidian.Obsidian com.github.tchx84
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
 
 
+read -rns1 -p "Please reboot.";echo
 
 
 
