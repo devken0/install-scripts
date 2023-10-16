@@ -137,9 +137,13 @@ sudo dnf in vim htop screenfetch ncdu ranger
 # others
 
 sudo dnf copr enable skidnik/clipmenu
-sudo dnf in catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance
+sudo dnf in catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct
 #sudo dnf in scrcpy mintstick gprename ytfzf
 read -rns1 -p "Press any key to continue..";echo
+
+# theming
+
+sudo dnf in arc-theme
 
 # ----------------------------------
 
@@ -149,6 +153,9 @@ sudo dnf in flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
+
+# post commands
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 read -rns1 -p "Please reboot..";echo
 
