@@ -4,10 +4,12 @@
 
 sudo dnf clean all 
 sudo dnf update && sudo dnf upgrade
+read -rns1 -p "Press any key to continue..";echo
 
 sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates
 sudo fwupdmgr update
+read -rns1 -p "Press any key to continue..";echo
 
 # Install/setup system packages 
 
@@ -17,6 +19,7 @@ sudo dnf install lame\* --exclude=lame-devel
 sudo dnf group upgrade --with-optional Multimedia
 sudo dnf in akmod-nvidia
 sudo dnf in polkit-gnome
+read -rns1 -p "Press any key to continue..";echo
 
 # ----------------------------------
 
@@ -100,6 +103,7 @@ sudo dnf in vim htop screenfetch ncdu ranger ytfzf
 # others
 
 sudo dnf in scrcpy mintstick catfish gpick gprename gip guvcview gparted soundconverter 
+read -rns1 -p "Press any key to continue..";echo
 
 
 # ----------------------------------
@@ -111,7 +115,7 @@ flatpak install flathub org.signal.Signal md.obsidian.Obsidian com.github.tchx84
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal
 
 
-read -rns1 -p "Please reboot.";echo
+read -rns1 -p "Please reboot..";echo
 
 
 
