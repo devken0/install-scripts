@@ -30,7 +30,7 @@ sudo dnf in wget
 # security 
 
 sudo dnf in https://repo.protonvpn.com/fedora-38-unstable/protonvpn-beta-release/protonvpn-beta-release-1.0.1-2.noarch.rpm
-wget -P ~/.local/bin https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=appimage
+wget -P ~/.local/bin https://github.com/bitwarden/clients/releases/download/desktop-v2023.9.2/Bitwarden-2023.9.2-x86_64.AppImage
 sudo dnf in https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-CentOS-8-x86_64.rpm
 sudo dnf in keepassxc firewalld
 
