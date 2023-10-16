@@ -29,6 +29,22 @@ sudo dnf in wget
 
 # security 
 
+sudo dnf in ddclient
+cat <<EOF | sudo tee /etc/ddclient.conf
+##
+## OpenDNS.com account-configuration
+##
+protocol=dyndns2
+use=web, web=myip.dnsomatic.com
+ssl=yes
+server=updates.opendns.com
+login=opendns_username
+password='opendns_password'
+opendns_network_label
+EOF
+sudo semanage fcontext -a -t ddclient_etc_t 'ddclient.conf'
+sudo restorecon -v '/etc/ddclient.conf'
+sudo systemctl enable ddclient --now
 sudo dnf in https://repo.protonvpn.com/fedora-38-unstable/protonvpn-beta-release/protonvpn-beta-release-1.0.1-2.noarch.rpm
 sudo dnf in protonvpn
 wget -P ~/.local/bin https://github.com/bitwarden/clients/releases/download/desktop-v2023.9.2/Bitwarden-2023.9.2-x86_64.AppImage
@@ -87,7 +103,7 @@ sudo dnf install microsoft-edge-stable
 # file sync utilities
 
 sudo dnf in https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2023.09.06-1.fedora.x86_64.rpm
-sudo dnf in rclone
+sudo dnf in rclone syncthing
 
 # file backup utilities
 
