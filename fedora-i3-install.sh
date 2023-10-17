@@ -141,13 +141,13 @@ sudo dnf in vim htop screenfetch ncdu ranger
 # others
 
 sudo dnf copr enable skidnik/clipmenu
-sudo dnf in thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
+sudo dnf in xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
 #sudo dnf in scrcpy mintstick gprename ytfzf
 read -rns1 -p "Press any key to continue..";echo
 
 # theming
 
-sudo dnf in arc-theme
+sudo dnf in arc-theme adw-gtk3-theme adwaita-gtk2-theme adwaita-qt5 adwaita-qt6
 
 # ----------------------------------
 
