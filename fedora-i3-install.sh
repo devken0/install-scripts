@@ -86,6 +86,13 @@ sudo dnf in https://release.axocdn.com/linux/gitkraken-amd64.rpm
 sudo dnf group in "C Development Tools and Libraries"
 sudo dnf in cmake 
 
+# productivity
+
+#wget -P ~/bin https://electron-dl.todoist.net/linux/Todoist-linux-x86_64-8.9.1.AppImage
+#cd ~/bin
+#chmod +x *.AppImage
+#ln -s ~/bin/Todoist-linux-x86_64-8.9.1.AppImage ~/.local/bin/todoist 
+
 # downloaders
 
 sudo dnf in qbittorrent uget 
