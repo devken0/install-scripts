@@ -130,7 +130,7 @@ sudo firewall-cmd --reload
 
 # office
 
-sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm libreoffice
+sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm libreoffice apvlv 
 wget -P ~/bin https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage
 sudo ln -s ~/bin/Obsidian-1.4.16.AppImage ~/.local/bin/obsidian
 
@@ -141,7 +141,7 @@ sudo dnf in vim htop screenfetch ncdu ranger
 # others
 
 sudo dnf copr enable skidnik/clipmenu
-sudo dnf in xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
+sudo dnf in vis vim-X11 xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
 #sudo dnf in scrcpy mintstick gprename ytfzf
 read -rns1 -p "Press any key to continue..";echo
 
