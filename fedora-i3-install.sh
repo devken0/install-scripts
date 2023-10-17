@@ -96,10 +96,6 @@ sudo dnf in dnf-plugins-core
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf in brave-browser
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
-sudo dnf update --refresh
-sudo dnf install microsoft-edge-stable
 
 # file sync utilities
 
@@ -155,7 +151,7 @@ sudo dnf in arc-theme adw-gtk3-theme adwaita-gtk2-theme adwaita-qt5 adwaita-qt6
 
 sudo dnf in flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal 
+flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal com.microsoft.Edge 
 flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal com.belmoussaoui.Authenticator
 
 # post commands
