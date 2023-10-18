@@ -121,6 +121,23 @@ rm IDriveForLinux.zip
 
 sudo dnf in timeshift
 
+# https://copr.fedorainfracloud.org/coprs/kylegospo/grub-btrfs/
+#sudo dnf copr enable kylegospo/grub-btrfs  
+#sudo dnf in grub-btrf-timeshift
+#grub2-mkconfig -o /boot/grub2/grub.cfg
+#sudo systemctl enable --now grub-btrfs.path 
+
+# https://github.com/Antynea/grub-btrfs#-manual-usage-of-grub-btrfs
+sudo dnf in inotify-tools btrfs-progs gawk
+git clone https://github.com/Antynea/grub-btrfs.git
+mv ~/grub-btrfs ~/bin/grub-btrfs 
+sudo make install 
+sudo systemctl enable --now grub-btrfsd
+sudo systemctl edit --full grub-btrfsd
+# replace ExecStart=/usr/bin/grub-btrfsd /.snapshots --syslog
+# with ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
+sudo systemctl restart grub-btrfsd
+
 # multimedia 
 
 sudo dnf in --allowerasing feh vlc picard peek kdenlive simplescreenrecorder flameshot ffmpeg ffmpeg-devel yt-dlp 
