@@ -141,10 +141,16 @@ sudo ln -s ~/bin/Obsidian-1.4.16.AppImage ~/.local/bin/obsidian
 
 sudo dnf in vim htop screenfetch ncdu ranger
 
+# text editor
+# https://www.sublimetext.com/docs/linux_repositories.html#dnf
+sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sudo dnf install sublime-text
+
 # others
 
 sudo dnf copr enable skidnik/clipmenu
-sudo dnf in vis vim-X11 xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
+sudo dnf in xed vis vim-X11 xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
 #sudo dnf in scrcpy mintstick gprename ytfzf
 read -rns1 -p "Press any key to continue..";echo
 
