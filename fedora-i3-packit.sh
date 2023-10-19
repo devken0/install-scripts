@@ -174,7 +174,7 @@ read -rns1 -p "Press any key to continue..";echo
 
 # theming
 
-sudo dnf in arc-theme adw-gtk3-theme adwaita-gtk2-theme adwaita-qt5 adwaita-qt6
+sudo dnf in f38-backgrounds-gnome f38-backgrounds-extras-gnome arc-theme adw-gtk3-theme adwaita-gtk2-theme adwaita-qt5 adwaita-qt6
 
 # ----------------------------------
 
