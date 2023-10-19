@@ -168,7 +168,7 @@ sudo dnf install sublime-text
 # others
 
 sudo dnf copr enable skidnik/clipmenu
-sudo dnf in xed vis vim-X11 xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
+sudo dnf in screenkey xed vis vim-X11 xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
 #sudo dnf in scrcpy mintstick gprename ytfzf
 read -rns1 -p "Press any key to continue..";echo
 
