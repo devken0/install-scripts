@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# variables
+
+APPDIR=/home/$USER/bin
 # Initial updates
 
 sudo dnf clean all 
