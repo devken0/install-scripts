@@ -57,7 +57,12 @@ sudo dnf in keepassxc firewalld
 
 # vms
 
+# https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/
 sudo dnf in qemu @Virtualization
+sudo vi /etc/libvirt/libvirtd.conf
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+sudo usermod -a -G libvirt $(whoami)
 
 # package manager
 
@@ -170,6 +175,13 @@ sudo dnf install sublime-text
 
 # others
 
+# packettracer
+# Download from https://skillsforall.com/resources/lab-downloads
+cd $APPDIR 
+git clone https://github.com/thiagoojack/packettracer-fedora.git
+cd $APPDIR/packettracer-fedora
+chmod +x install.sh
+./install.sh
 sudo dnf copr enable skidnik/clipmenu
 sudo dnf in screenkey xed vis vim-X11 xarchiver thunar-archive-plugin thunar-sendto-clamtk catfish gpick gip guvcview gparted soundconverter clipmenu lxappearance qt5ct picom filezilla
 #sudo dnf in scrcpy mintstick gprename ytfzf
@@ -185,8 +197,8 @@ sudo dnf in f38-backgrounds-gnome f38-backgrounds-extras-gnome arc-theme adw-gtk
 
 sudo dnf in flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal com.microsoft.Edge 
-flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal com.belmoussaoui.Authenticator
+flatpak install flathub org.signal.Signal com.github.tchx84.Flatseal com.microsoft.Edge com.librumreader.librum com.belmoussaoui.Authenticator
+flatpak override --user --env=SIGNAL_START_IN_TRAY=1 org.signal.Signal 
 
 # post commands
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark 
