@@ -177,6 +177,11 @@ sudo dnf install sublime-text
 
 # gallery-dl (a youtube-dl clone) 
 wget -P $APPDIR https://github.com/mikf/gallery-dl/releases/download/v1.26.2/gallery-dl.bin
+cd $APPDIR
+chmod +x gallery-dl.bin
+ln -s $APPDIR/gallery-dl.bin /home/$USER/.local/bin/gallery-dl 
+
+
 # packettracer
 # Download from https://skillsforall.com/resources/lab-downloads
 cd $APPDIR 
