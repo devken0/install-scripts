@@ -58,11 +58,14 @@ sudo dnf in keepassxc firewalld
 # vms
 
 # https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/
-sudo dnf in qemu @Virtualization
-sudo vi /etc/libvirt/libvirtd.conf
-sudo systemctl start libvirtd
-sudo systemctl enable libvirtd
-sudo usermod -a -G libvirt $(whoami)
+#sudo dnf in qemu @Virtualization
+#sudo vi /etc/libvirt/libvirtd.conf
+#sudo systemctl start libvirtd
+#sudo systemctl enable libvirtd
+#sudo usermod -a -G libvirt $(whoami)
+
+# VMWare Workstation Player
+# https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1750&productId=1377&rPId=111473
 
 # package manager
 
