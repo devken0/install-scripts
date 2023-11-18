@@ -94,6 +94,7 @@ sudo yum in unityhub
 sudo dnf in https://release.axocdn.com/linux/gitkraken-amd64.rpm
 sudo dnf group in "C Development Tools and Libraries"
 sudo dnf in cmake 
+sudo dnf in android-tools
 
 # productivity
 
@@ -149,7 +150,7 @@ sudo systemctl restart grub-btrfsd
 
 # multimedia 
 
-sudo dnf in --allowerasing feh vlc picard peek kdenlive simplescreenrecorder flameshot ffmpeg ffmpeg-devel yt-dlp 
+sudo dnf in --allowerasing mpv sxiv feh vlc picard peek kdenlive simplescreenrecorder flameshot ffmpeg ffmpeg-devel yt-dlp 
 
 # communication
 
@@ -162,6 +163,7 @@ sudo firewall-cmd --reload
 sudo dnf in https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm libreoffice apvlv 
 wget -P ~/bin https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage
 sudo ln -s ~/bin/Obsidian-1.4.16.AppImage ~/.local/bin/obsidian
+sudo dnf in zathura
 
 # cli utils 
 
@@ -174,6 +176,16 @@ sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x
 sudo dnf install sublime-text
 
 # others
+
+# universal android debloater
+
+wget -P $APPDIR https://github.com/0x192/universal-android-debloater/releases/download/0.5.1/uad_gui-linux.tar.gz 
+
+# devour - terminal window swallowing utility
+
+cd $APPDIR
+git clone https://github.com/salman-abedin/devour.sh.git
+
 
 # gallery-dl (a youtube-dl clone) 
 wget -P $APPDIR https://github.com/mikf/gallery-dl/releases/download/v1.26.2/gallery-dl.bin
