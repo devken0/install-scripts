@@ -98,6 +98,7 @@ sudo dnf in https://release.axocdn.com/linux/gitkraken-amd64.rpm
 sudo dnf group in "C Development Tools and Libraries"
 sudo dnf in cmake 
 sudo dnf in android-tools
+sudo dnf in npm
 
 # productivity
 
