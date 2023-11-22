@@ -171,7 +171,7 @@ sudo dnf in zathura
 
 # cli utils 
 
-sudo dnf in vim htop screenfetch ncdu ranger
+sudo dnf in speedtest-cli vim htop screenfetch ncdu ranger
 
 # text editor
 # https://www.sublimetext.com/docs/linux_repositories.html#dnf
