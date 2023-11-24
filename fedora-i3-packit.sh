@@ -181,6 +181,10 @@ sudo dnf install sublime-text
 
 # others
 
+# waydroid
+
+sudo dnf in waydroid
+
 # universal android debloater
 
 wget -P $APPDIR https://github.com/0x192/universal-android-debloater/releases/download/0.5.1/uad_gui-linux.tar.gz 
@@ -196,7 +200,6 @@ wget -P $APPDIR https://github.com/mikf/gallery-dl/releases/download/v1.26.2/gal
 cd $APPDIR
 chmod +x gallery-dl.bin
 ln -s $APPDIR/gallery-dl.bin /home/$USER/.local/bin/gallery-dl 
-
 
 # packettracer
 # Download from https://skillsforall.com/resources/lab-downloads
