@@ -171,7 +171,7 @@ sudo dnf in zathura
 
 # cli utils 
 
-sudo dnf in speedtest-cli vim htop screenfetch ncdu ranger
+sudo dnf in st speedtest-cli vim htop screenfetch ncdu ranger
 
 # text editor
 # https://www.sublimetext.com/docs/linux_repositories.html#dnf
@@ -180,6 +180,11 @@ sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x
 sudo dnf install sublime-text
 
 # others
+
+# ventoy
+
+wget -P $APPDIR https://sourceforge.net/projects/ventoy/files/v1.0.96/ventoy-1.0.96-linux.tar.gz/download
+ln -s $APPDIR/ventoy-*/VentoyGUI.x86_64 $HOME/.local/bin/ventoy
 
 # waydroid
 
