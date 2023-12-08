@@ -75,7 +75,14 @@ sudo dnf in dnfdragora
 
 sudo dnf in bleachbit
 
-# development  
+# Development  
+# Setting up repositories
+wget -P $HOME/Downloads https://dev.mysql.com/get/mysql80-community-release-fc39-1.noarch.rpm
+cd $HOME/Downloads
+sudo rpm -Uvh mysql80-community-release-*
+
+# Install MySQL Workbench and Server
+sudo dnf in mysql-workbench mysql
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
